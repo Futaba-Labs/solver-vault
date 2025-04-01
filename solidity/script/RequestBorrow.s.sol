@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.25;
 
 import {Script, console} from "forge-std/Script.sol";
 import {Endpoint} from "../src/Endpoint.sol";
@@ -21,7 +21,7 @@ contract DeployScript is Script {
     address inputToken = 0x1BDD24840e119DC2602dCC587Dd182812427A5Cc; // OP Sepolia WETH
     uint256 amountIn = 0.001 ether;
     uint256 amountOut = 0.0009 ether;
-    uint256 senderNonce = 1;
+    uint256 senderNonce = 3;
     uint32 origin = 11155420;
     uint32 destination = 84532;
 
@@ -33,7 +33,7 @@ contract DeployScript is Script {
         OrderData memory order = OrderData(
             TypeCasts.addressToBytes32(depositor),
             TypeCasts.addressToBytes32(depositor),
-            TypeCasts.addressToBytes32(address(inputToken)),
+            TypeCasts.addressToBytes32(address(0)),
             TypeCasts.addressToBytes32(address(0)),
             amountIn,
             amountOut,

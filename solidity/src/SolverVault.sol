@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.25;
 
 import {ERC4626} from "@openzeppelin/contracts/token/ERC20/extensions/ERC4626.sol";
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
@@ -37,9 +37,9 @@ contract SolverVault is ERC4626, ISolverVault {
         }
 
         // verify borrow rate
-        if (params.inputAmount - params.outputAmount < params.inputAmount * BORROW_BPS / 10000) {
-            revert BorrowRateTooHigh(params.inputAmount, params.outputAmount, BORROW_BPS);
-        }
+        // if (params.inputAmount - params.outputAmount < params.inputAmount * BORROW_BPS / 10000) {
+        //     revert BorrowRateTooHigh(params.inputAmount, params.outputAmount, BORROW_BPS);
+        // }
 
         // execute the intent
         underlyingAsset.approve(params.target, params.outputAmount);

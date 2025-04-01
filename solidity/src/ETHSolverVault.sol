@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.25;
 
 import {SolverVault} from "./SolverVault.sol";
 import {IWETH} from "./interfaces/IWETH.sol";
@@ -58,9 +58,9 @@ contract ETHSolverVault is SolverVault {
         }
 
         // verify borrow rate
-        if (params.inputAmount - params.outputAmount < params.inputAmount * BORROW_BPS / 10000) {
-            revert BorrowRateTooHigh(params.inputAmount, params.outputAmount, BORROW_BPS);
-        }
+        // if (params.inputAmount - params.outputAmount < params.inputAmount * BORROW_BPS / 10000) {
+        //     revert BorrowRateTooHigh(params.inputAmount, params.outputAmount, BORROW_BPS);
+        // }
 
         // execute the intent
         if (params.isNative) {

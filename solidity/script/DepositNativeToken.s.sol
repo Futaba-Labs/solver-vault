@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.25;
 
 import {Script, console} from "forge-std/Script.sol";
 import {Endpoint} from "../src/Endpoint.sol";
@@ -14,7 +14,7 @@ contract DeployScript is Script {
     ETHSolverVault public ethSolverVault = ETHSolverVault(payable(vm.envAddress("ETH_SOLVER_VAULT")));
     address owner = vm.envAddress("OWNER");
     address depositor = payable(vm.envAddress("DEPOSITOR"));
-    uint256 amount = 0.001 ether;
+    uint256 amount = 0.01 ether;
 
     function setUp() public {}
 
