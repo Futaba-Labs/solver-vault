@@ -9,7 +9,7 @@ export const Header = () => {
   
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Bridge', path: '/deposit' }
+    { name: 'Bridge', path: 'https://intents-framework-ui.vercel.app' }
   ]
 
   return (
@@ -22,6 +22,7 @@ export const Header = () => {
               <li key={item.path}>
                 <Link 
                   href={item.path}
+                  target={item.path.includes('https') ? '_blank' : undefined}
                   className={`hover:text-blue-600 transition-colors ${
                     pathname === item.path ? 'text-blue-600 font-medium' : 'text-gray-600 dark:text-gray-300'
                   }`}
