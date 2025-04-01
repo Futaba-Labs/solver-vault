@@ -1,0 +1,24 @@
+{
+  "name": "solidity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "forge test --match-path test/SolverVault.t.sol",
+    "deploy": "forge script script/Deploy.s.sol -f base-sepolia --broadcast --slow -vvv",
+    "deposit": "forge script script/DepositNativeToken.s.sol -f base-sepolia --broadcast --slow -vvv",
+    "request-borrow": "forge script script/RequestBorrow.s.sol -f base-sepolia --broadcast --slow -vvv"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.4.0+sha512.6b849d0787d97f8f4e1f03a9b8ff8f038e79e153d6f11ae539ae7c435ff9e796df6a862c991502695c7f9e8fac8aeafc1ac5a8dab47e36148d183832d886dd52",
+  "dependencies": {
+    "@bootnodedev/intents-framework": "github:BootNodeDev/intents-framework",
+    "@hyperlane-xyz/core": "^5.4.1",
+    "@openzeppelin/contracts": "^4.9.6",
+    "@openzeppelin/contracts-upgradeable": "^4.9.6",
+    "@uniswap/permit2": "github:Uniswap/permit2",
+    "forge-std": "github:foundry-rs/forge-std#v1.8.1"
+  }
+}

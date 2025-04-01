@@ -1,0 +1,5 @@
+@openzeppelin/=node_modules/@openzeppelin/
+forge-std/=node_modules/forge-std/src/
+@hyperlane-xyz/=node_modules/@hyperlane-xyz/core/contracts/
+@intents-framework/=node_modules/@bootnodedev/intents-framework/solidity/
+@uniswap/=node_modules/@uniswap/
