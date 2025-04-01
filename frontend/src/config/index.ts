@@ -38,10 +38,10 @@ export const AVAILABLE_CHAINS = [
     id: 84532, // Base Sepolia
     name: "Base Sepolia",
   },
-  // {
-  //   id: 11155420, // OP Sepolia
-  //   name: "OP Sepolia",
-  // }
+  {
+    id: 11155420, // OP Sepolia
+    name: "OP Sepolia",
+  }
 ]
 
 //Set up the Wagmi Adapter (Config)
